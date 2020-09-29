@@ -16,7 +16,7 @@ export default class AddFolder extends Component {
   submitAddFolderForm = (event) => {
     event.preventDefault();
 
-    fetch("http://localhost:8000/api/folders", {
+    fetch(`${config.API_ENDPOINT}/folders`, {
       method: "POST",
       headers: {
         "Authorization": "Bearer " + config.API_KEY,

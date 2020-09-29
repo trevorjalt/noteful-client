@@ -33,7 +33,7 @@ export default class AddNote extends Component {
       modified: new Date(),
     };
 
-    fetch("http://localhost:8000/api/notes", {
+    fetch(`${config.API_ENDPOINT}/notes`, {
       method: "POST",
       headers: {
         "Authorization": "Bearer " + config.API_KEY,
